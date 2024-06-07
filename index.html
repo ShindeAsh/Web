@@ -65,30 +65,34 @@
 
         form {
             text-align: left;
-            margin-right: 100px; 
+            margin-right: 100px;
         }
 
         #qr {
-            margin-left: 100px; 
+            margin-left: 100px;
         }
-        #sendButton{
+
+        #sendButton {
             margin-left: 100px;
             margin-top: 10px;
             padding: 0.3cm;
             background-color: rgb(45, 64, 87);
-            color:rgb(0, 225, 255);
+            color: rgb(0, 225, 255);
             font-family: cursive;
             border: 0;
         }
-        #sendButton:hover{
+
+        #sendButton:hover {
             background-color: #073ff8;
         }
-        #made{
+
+        #made {
             text-align: center;
             font-family: sans-serif;
             color: rgb(131, 131, 131);
         }
-        footer div{
+
+        footer div {
             background: rgb(48, 48, 48);
             padding: 10px;
         }
@@ -100,7 +104,7 @@
     <nav>
         <div>
             <button class="navButtons">Who Am I?</button>
-            <button class="navButtons">Website Code</button>
+            <a href="code.html" target="_blank"><button class="navButtons">Website Code</button> </a>
             <button class="navButtons">Do Not Click Here</button>
         </div>
     </nav>
@@ -117,7 +121,7 @@
                 <label for="other">Animal You Don't Like:</label>
                 <input type="text" id="other" placeholder="Any...">
             </form>
-            <button id="sendButton" onclick="SendData()">Generate QR Code</button> 
+            <button id="sendButton" onclick="SendData()">Generate QR Code</button>
         </div>
         <img id="qr" src="" alt="QR Code will appear here">
     </div>
