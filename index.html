@@ -7,23 +7,21 @@
     <title>It's Title...Less</title>
 
     <style>
-        /* Resetting default margin and padding */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Common styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: black;
             color: white;
             line-height: 1.6;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden; 
         }
 
-        /* Header styles */
         header {
             background-color: rgb(26, 26, 26);
             padding: 20px 0;
@@ -35,7 +33,6 @@
             font-size: 2.5rem;
         }
 
-        /* Navigation styles */
         nav {
             background-color: #292929;
             padding: 10px 0;
@@ -56,8 +53,6 @@
         .navButtons:hover {
             background-color: rgb(100, 100, 100);
         }
-
-        /* Form styles */
         #formdiv {
             display: flex;
             flex-direction: column;
@@ -109,14 +104,12 @@
             background-color: #073ff8;
         }
 
-        /* QR Code image styles */
         #qr {
             max-width: 100%;
             height: auto;
             margin-top: 20px;
         }
 
-        /* Footer styles */
         footer {
             background: rgb(48, 48, 48);
             padding: 10px 0;
@@ -150,8 +143,8 @@
             <input type="text" id="name" placeholder="Enter Here">
             <label for="other">Animal You Don't Like:</label>
             <input type="text" id="other" placeholder="Any...">
-            <button id="sendButton" onclick="SendData()">Generate QR Code</button>
         </form>
+        <button id="sendButton" onclick="SendData()">Generate QR Code</button>
         <img id="qr" src="" alt="QR Code will appear here">
     </div>
 
