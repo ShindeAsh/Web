@@ -7,128 +7,157 @@
     <title>It's Title...Less</title>
 
     <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Common styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Header styles */
+        header {
+            background-color: rgb(26, 26, 26);
+            padding: 20px 0;
+        }
+
         h1 {
             text-align: center;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: white;
+            margin: 0;
+            font-size: 2.5rem;
         }
 
-        #hdiv {
-            background-color: rgb(26, 26, 26);
-            padding: 35px;
-        }
-
-        #formdiv {
-            display: flex;
-            align-items: center;
-            padding: 50px;
-            padding-bottom: 80px;
-            background-color: rgb(24, 24, 24);
-        }
-
-        label {
-            color: white;
-            font-family: cursive;
-            font-size: large;
-        }
-
-        input {
-            font-family: cursive;
-            background: rgb(78, 78, 78);
-            border: 0;
-            width: 200px;
-            color: aqua;
-            margin: 30px;
-            padding: 10px;
-        }
-
-        input::placeholder {
-            color: lightgreen;
-        }
-
-        nav div {
-            padding: 10px;
-            background: #292929;
-            text-align: right;
+        /* Navigation styles */
+        nav {
+            background-color: #292929;
+            padding: 10px 0;
+            text-align: center;
         }
 
         .navButtons {
-            padding: 10px;
+            padding: 10px 20px;
             border: 0;
             background-color: rgb(71, 71, 71);
             color: white;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
         }
 
         .navButtons:hover {
             background-color: rgb(100, 100, 100);
         }
 
-        form {
-            text-align: left;
-            margin-right: 100px;
+        /* Form styles */
+        #formdiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
-        #qr {
-            margin-left: 100px;
+        form {
+            text-align: center;
+            margin: 20px 0;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        input {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: rgb(78, 78, 78);
+            border: 0;
+            width: calc(100% - 20px);
+            max-width: 300px;
+            color: aqua;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        input::placeholder {
+            color: lightgreen;
         }
 
         #sendButton {
-            margin-left: 100px;
-            margin-top: 10px;
-            padding: 0.3cm;
+            padding: 10px 20px;
             background-color: rgb(45, 64, 87);
             color: rgb(0, 225, 255);
-            font-family: cursive;
             border: 0;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
         }
 
         #sendButton:hover {
             background-color: #073ff8;
         }
 
-        #made {
-            text-align: center;
-            font-family: sans-serif;
-            color: rgb(131, 131, 131);
+        /* QR Code image styles */
+        #qr {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
         }
 
-        footer div {
+        /* Footer styles */
+        footer {
             background: rgb(48, 48, 48);
-            padding: 10px;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        #made {
+            color: rgb(131, 131, 131);
+            margin: 0;
+            font-size: 0.8rem;
         }
     </style>
 
 </head>
 
-<body bgcolor="black">
+<body>
+
+    <header>
+        <h1>QR Code Generator</h1>
+    </header>
+
     <nav>
-        <div>
-            <button class="navButtons">Who Am I?</button>
-            <a href="code.html" target="_blank"><button class="navButtons">Website Code</button> </a>
-            <button class="navButtons">Do Not Click Here</button>
-        </div>
+        <button class="navButtons">Who Am I?</button>
+        <a href="code.html" target="_blank"><button class="navButtons">Website Code</button></a>
+        <button class="navButtons">Do Not Click Here</button>
     </nav>
 
-    <div id="hdiv">
-        <h1>QR Code Generator</h1>
-    </div>
     <div id="formdiv">
-        <div>
-            <form>
-                <label for="name">Enter Your Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" id="name" placeholder="Enter Here">
-                <br>
-                <label for="other">Animal You Don't Like:</label>
-                <input type="text" id="other" placeholder="Any...">
-            </form>
+        <form>
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="name" placeholder="Enter Here">
+            <label for="other">Animal You Don't Like:</label>
+            <input type="text" id="other" placeholder="Any...">
             <button id="sendButton" onclick="SendData()">Generate QR Code</button>
-        </div>
+        </form>
         <img id="qr" src="" alt="QR Code will appear here">
     </div>
 
     <footer>
         <div>
-            <h2 id="made">&copy; Made By A Human Living On Earth</h5>
+            <h2 id="made">&copy; Made By A Human Living On Earth</h2>
         </div>
     </footer>
 
