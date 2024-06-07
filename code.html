@@ -1,0 +1,187 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Code</title>
+</head>
+
+<body>
+    <pre>
+        <h1>Javascript</h1>
+updateQRCode("Write Something First")
+function SendData() {
+    const qrImage = document.getElementById('qr');
+    qrImage.src = "";
+    const name = document.getElementById("name").value;
+    const animal = document.getElementById("other").value;
+    var upName = String(name);
+    var newName = upName.toLowerCase();
+    if (newName.includes("ash")) {
+        const data = `The Person Who Typed this Name Is DONKEY`;
+        updateQRCode(data);
+    } else {
+        if (newName.includes("ash")){
+            const data = "im not allowing that"
+            updateQRCode(data);
+        }
+        const data = `${name} is a ${animal}`;
+        updateQRCode(data);
+    }
+}
+
+function updateQRCode(newData) {
+    const qrImage = document.getElementById('qr');
+    qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(newData)}&size=200x200`;
+}
+
+
+
+        <h1>HTML</h1>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+
+    &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;It's Title...Less&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body bgcolor=&quot;black&quot;&gt;
+    &lt;nav&gt;
+        &lt;div&gt;
+            &lt;button class=&quot;navButtons&quot;&gt;Who Am I?&lt;/button&gt;
+            &lt;a href=&quot;code.html&quot; target=&quot;_blank&quot;&gt;&lt;button class=&quot;navButtons&quot;&gt;Website Code&lt;/button&gt; &lt;/a&gt;
+            &lt;button class=&quot;navButtons&quot;&gt;Do Not Click Here&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div id=&quot;hdiv&quot;&gt;
+        &lt;h1&gt;QR Code Generator&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;formdiv&quot;&gt;
+        &lt;div&gt;
+            &lt;form&gt;
+                &lt;label for=&quot;name&quot;&gt;Enter Your Name: &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Enter Here&quot;&gt;
+                &lt;br&gt;
+                &lt;label for=&quot;other&quot;&gt;Animal You Don't Like:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;other&quot; placeholder=&quot;Any...&quot;&gt;
+            &lt;/form&gt;
+            &lt;button id=&quot;sendButton&quot; onclick=&quot;SendData()&quot;&gt;Generate QR Code&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;img id=&quot;qr&quot; src=&quot;&quot; alt=&quot;QR Code will appear here&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;footer&gt;
+        &lt;div&gt;
+            &lt;h2 id=&quot;made&quot;&gt;&amp;copy; Made By A Human Living On Earth&lt;/h5&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
+
+
+<h1>CSS</h1>
+&lt;style&gt;
+        h1 {
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+
+        #hdiv {
+            background-color: rgb(26, 26, 26);
+            padding: 35px;
+        }
+
+        #formdiv {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            padding-bottom: 80px;
+            background-color: rgb(24, 24, 24);
+        }
+
+        label {
+            color: white;
+            font-family: cursive;
+            font-size: large;
+        }
+
+        input {
+            font-family: cursive;
+            background: rgb(78, 78, 78);
+            border: 0;
+            width: 200px;
+            color: aqua;
+            margin: 30px;
+            padding: 10px;
+        }
+
+        input::placeholder {
+            color: lightgreen;
+        }
+
+        nav div {
+            padding: 10px;
+            background: #292929;
+            text-align: right;
+        }
+
+        .navButtons {
+            padding: 10px;
+            border: 0;
+            background-color: rgb(71, 71, 71);
+            color: white;
+        }
+
+        .navButtons:hover {
+            background-color: rgb(100, 100, 100);
+        }
+
+        form {
+            text-align: left;
+            margin-right: 100px;
+        }
+
+        #qr {
+            margin-left: 100px;
+        }
+
+        #sendButton {
+            margin-left: 100px;
+            margin-top: 10px;
+            padding: 0.3cm;
+            background-color: rgb(45, 64, 87);
+            color: rgb(0, 225, 255);
+            font-family: cursive;
+            border: 0;
+        }
+
+        #sendButton:hover {
+            background-color: #073ff8;
+        }
+
+        #made {
+            text-align: center;
+            font-family: sans-serif;
+            color: rgb(131, 131, 131);
+        }
+
+        footer div {
+            background: rgb(48, 48, 48);
+            padding: 10px;
+        }
+&lt;/style&gt;
+
+    </pre>
+</body>
+
+</html>
