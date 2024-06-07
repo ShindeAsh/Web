@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>PCMC Station</h2>
+    <form id="ticketForm" onsubmit="event.preventDefault(); SendData();">
+        <div>
+            <label for="name">Enter First And Last Name </label>
+            <input id="name" type="text" placeholder="Enter Here...">
+        </div>
+        <br>
+        <div>
+            <label for="mb">Enter Mobile No: </label>
+            <input id="mb" type="text" placeholder="Enter Here...">
+        </div>
+        <br>
+        <div>
+            <label for="quantity">Enter Ticket Quantity: </label>
+            <input id="quantity" type="number" placeholder="Enter Here...">
+        </div>
+        <br>
+        <button type="submit">Generate Ticket</button>
+    </form>
+    <br>
+    <br>
+    <img id="qr" src="" alt="QR Code will appear here">
+    <a id="dl" href=""></a>
+</body>
+<script src="script.js"></script>
+</html>
