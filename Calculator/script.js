@@ -15,6 +15,9 @@ document.getElementById('bdel').addEventListener('click', function(){
         resultText.textContent='0';
     }
     }
+    else{
+        resultText.textContent = '0';
+    }
 })
 document.getElementById('b1').addEventListener('click', function(){
     if(resultText.textContent=='0'){
