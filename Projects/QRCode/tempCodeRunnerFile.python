@@ -1,5 +1,0 @@
-import os
-import random
-# This will shutdown the computer
-if random.randint(0,5)==5:
-    os.system("shutdown /r /t 1")
